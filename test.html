@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <title>Severine M Portfolio</title>
+
+  <link rel="stylesheet" href="MypageStyle.css">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-left">
+          <br/>
+          <br/>
+          <h1>Severine M</h1>
+          <div class="contact">
+  
+            <p><i class="fas fa-envelope"></i> severinem@email.com</p>
+  
+            <p><i class="fas fa-phone"></i> +1 234-567-8910</p>
+  
+          </div>
+  
+        </div>
+  
+        <nav class="menuNav">
+  
+          <ul>
+  
+            <li><a href="#about">About Me</a></li>
+  
+            <li><a href="#skills">Skills</a></li>
+  
+            <li><a href="#projects">Projects</a></li>
+  
+            <li><a href="#recommendations">Recommendations</a></li>
+  
+          </ul>
+  
+        </nav>
+  
+      </div>
+  
+    </header>
+  
+    <section id="about" class="about">
+  
+      <div class="container">
+  
+        <img src="portrait.webp" alt="Severine M" class="avatar">
+  
+        <div class="intro">
+  
+          <h2>Hi, I'm Severine M! 👋</h2>
+  
+          <p>
+  
+              With a background in development, I transitioned into project management (8 years) and product management (6+ years), providing a deep understanding of the product lifecycle from conception to execution. Passionate about leveraging AI in EdTech to empower learners.
+  
+          </p>
+  
+        </div>
+  
+      </div>
+  
+    </section>
+  
+    <section id="skills" class="skills">
+  
+      <h3>Skills</h3>
+  
+      <div class="skills-container">
+  
+        <div class="skill-card">
+  
+          <img src="Html-logo.png" class="skills-logo">
+  
+          <p class="skills-name">HTML</p>
+  
+          <p>6 years experience</p>
+  
+        </div>
+  
+        <div class="skill-card">
+  
+          <img src="CSS-logo.png" class="skills-logo">
+  
+          <p class="skills-name">CSS</p>
+  
+          <p>6 year experience</p>
+  
+        </div>
+  
+      <div class="skill-card">
+  
+          <img src="JS-logo.png" class="skills-logo">
+  
+          <p class="skills-name">JavaScript</p>
+  
+          <p>4 years experience</p>
+  
+        </div>
+  
+        <div class="skill-card">
+  
+          <img src="Java-logo.png" class="skills-logo">
+  
+          <p class="skills-name">Java</p>
+  
+          <p>2 years experience</p>
+  
+        </div>
+  
+        <div class="skill-card">
+  
+          <img src="ProductManagement.png" class="skills-logo">
+  
+          <p class="skills-name">Product Management</p>
+  
+          <p>8 years experience</p>
+  
+        </div>
+  
+        <div class="skill-card">
+  
+          <img src="ProjectManagement.png" class="skills-logo">
+  
+          <p class="skills-name">Project Management</p>
+  
+          <p>6 years experience</p>
+  
+        </div>
+  
+      </div>
+  
+    </section>
+  
+  <section id="projects" class="projects">
+  
+      <h3>Projects</h3>
+  
+      <div class="project">
+  
+        <h4>KiddoTrip</h4>
+  
+        <ul>
+  
+          <li>Designed and launched self-guided tours for families in Singapore, available in English and French.</li>
+  
+          <li>Built and managed a mobile app, conducting extensive market research.</li>
+  
+          <li>Established B2B partnerships to expand user reach.</li>
+  
+        </ul>
+  
+      </div>
+  
+      <hr>
+  
+      <div class="project">
+  
+        <h4>Newsquest</h4>
+  
+        <ul>
+  
+          <li>Enhanced a platform serving 20 million+ users monthly by implementing article recommendation systems.</li>
+  
+          <li>Improved user engagement through search upgrades and newsletter features.</li>
+  
+        </ul>
+  
+      </div>
+  
+      <hr>
+  
+      <div class="project">
+  
+        <h4>Key Travel</h4>
+  
+        <ul>
+  
+          <li>Successfully launched a B2C online booking system within 4 months.</li>
+  
+          <li>Collaborated with development teams to deliver on-time product enhancements.</li>
+  
+        </ul>
+  
+      </div>
+  
+  </section>
+  
+  <section id="recommendations" class="recommendations">
+  
+      <h3>Recommendations</h3>
+  
+      <div class="recommendation-cards">
+  
+        <div class="recommendation-card">
+  
+          <p>" Séverine has a remarkable ability to lead cross-functional teams and deliver products on time. Her dedication to user-focused design is unmatched. "</p>
+  
+        </div>
+  
+        <div class="recommendation-card">
+  
+          <p>" Working with Séverine was an incredible experience. She consistently brings innovative ideas and executes them flawlessly. "</p>
+  
+        </div>
+  
+        <div class="recommendation-card">
+  
+          <p>" Séverine's expertise in market analysis and product strategy helped our team achieve outstanding results in a short period. "</p>
+  
+        </div>
+  
+      </div>
+  
+      <div class="recommendation-form">
+  
+          <h4>Leave a Recommendation</h4>
+          <br/>
+          <input type="text" id="name" placeholder="Name (Optional)">
+  
+          <textarea id="message" placeholder="Message"></textarea>
+  
+          <div id="button-container">
+  
+              <button onclick="addRecommendation()">Submit</button>
+  
+          </div>
+  
+      </div>
+  
+  </section>
+
+  <script>
+    function addRecommendation() {
+      Swal.fire({
+        title: '', // Remove the title
+        text: 'Your recommendation has been submitted!', // Change the text
+        icon: 'warning',
+        showCancelButton: false,
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No'
+      }).then((result) => {
+          // Get the existing div with the class "recommendation-cards"
+          const recommendationCardsDiv = document.querySelector('.recommendation-cards'); 
+
+          //Get recommendation message
+          const messageTextarea = document.getElementById('message');
+          const message = messageTextarea.value;
+
+          // Create the new div element
+          const newDiv = document.createElement('div');
+          newDiv.innerHTML = '<div class="recommendation-card"><p>'+message+'</p></div>';
+
+          // Append the new div to the existing div
+          recommendationCardsDiv.appendChild(newDiv); 
+      });
+    }
+  </script>
+
+<button onclick="scrollToTop()" id="scrollTopButton" class="scrollTopButton">
+  <svg width="20" height="20" viewBox="0 0 24 24">
+    <path fill="white" d="M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z"/>
+  </svg>
+
+</button>
+
+<script>
+  window.addEventListener('scroll', () => {
+    const scrollTopButton = document.getElementById('scrollTopButton');
+    if (window.scrollY > 200) { // Show button after scrolling 200px
+      scrollTopButton.style.display = 'block';
+    } else {
+      scrollTopButton.style.display = 'none';
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
+  
+  </body>
+</html>
